@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberBeat // Divulgação e Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cyber-grid"></div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../assets/LogoT.png" alt="Logo CyberBeat">
+            </a>
+        </div>
+        <div class="Titulo">
+            <h1>Memórias</h1>
+        </div>
+        <div class="nav-links">
+            <a href="divulgacao.html">FOTOS</a> // 
+            <a href="ingressos.html">INGRESSOS</a> // 
+            <a href="contato.html">LOCAL</a>
+        </div>
+    </header>
+
+    <section class="lineup">
+        <h2>GALERIA</h2>
+        <div class="dj-list">
+            <div class="dj-card">
+                <h3>Foto 1</h3>
+                <img src="../assets/Logo.png" alt="Foto do Evento 1" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 2</h3>
+                <img src="../assets/47993,moradores-de-vilas-protestam-contra-rave-de-12h-3.jpg" alt="Foto do Evento 2" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 3</h3>
+                <img src="../assets/download (1).jfif" alt="Foto do Evento 3" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 4</h3>
+                <img src="../assets/images (1).jfif" alt="Foto do Evento 4" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 5</h3>
+                <img src="../assets/26806357-de-praia-clube-festa-com-pessoas-dancando-e-desfrutando-a-musica-debaixo-a-caloroso-sol-generativo-ai-foto.jpg" alt="Foto do Evento 5" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 6</h3>
+                <img src="../assets/images.jfif" alt="Foto do Evento 6" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 7</h3>
+                <img src="../assets/lucas-las-casas-5.webp" alt="Foto do Evento 7" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 8</h3>
+                <img src="../assets/Na-Praia-2024-credito-BS-Fotografias-2.webp" alt="Foto do Evento 8" onclick="openLightbox(this.src)">
+            </div>
+            <div class="dj-card">
+                <h3>Foto 9</h3>
+                <img src="../assets/rio bossa nossa ipanema.jpg" alt="Foto do Evento 9" onclick="openLightbox(this.src)"> 
+            </div>
+            <div class="dj-card">
+                    <h3>Foto 10</h3>
+                    <img src="../assets/um-grupo-de-jovens-mulheres-aproveita-festival-música-verão-numa-praia-areia-com-bebidas-e-dança-entre-multidão-à-luz-do-3589269.webp" alt="Foto do Evento 10" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para visualização ampliada -->
+    <div id="lightbox-modal">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Foto Ampliada">
+    </div>
+
+    <!-- Módulo de Áudio -->
+    <div class="cyber-player">
+        <audio id="bg-music" loop>
+            <source src="../assets/musica.mp3" type="audio/mpeg">
+        </audio>
+        <button class="player-btn" onclick="prevTrack()" title="Anterior">⏮</button>
+        <button id="play-btn" class="player-btn" onclick="toggleMusic()" title="Play/Pause">▶</button>
+        <button class="player-btn" onclick="nextTrack()" title="Próxima">⏭</button>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jonathan.andrietti.3?locale=pt_BR"
+            target="_blank"><img width="90px" src="../assets/FacebookPsy.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/jonathan_andrietti/?hl=pt-br"
+            target="_blank"><img width="100px" src="../assets/InstagranPsy.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/jonathan-andrietti/"
+            target="_blank"><img width="100px" src="../assets/LinkdinPsy.png" alt="Linkedin"></a>
+            <a href="https://tiktok.com/@jonathan_andrietti"
+            target="_blank"><img width="90px" src="../assets/TiktokPsy.png" alt="TikTok"></a>
+            <a href="https://www.youtube.com/watch?v=q8p_S9e6RUk&list=RDq8p_S9e6RUk&start_radio=1" target="_blank"><img width="90px" src="../assets/YoutubePsy.png" alt="YouTube"></a>
+        </div>
+        <p class="location">Av. Atlântica, Barra Sul - Balneário Camboriú // Arena Cyber Beach</p>
+        <p class="copy">&copy; 2024 CyberBeat. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openLightbox(src) {
+            const modal = document.getElementById('lightbox-modal');
+            const modalImg = document.getElementById('lightbox-img');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').style.display = 'none';
+        }
+
+        const playlist = [
+            { name: 'RADIO_PSY_01.MP3', src: '../assets/musica.mp3' },
+            { name: 'TECHNO_CORE_02.MP3', src: '../assets/musica2.mp3' },
+            { name: 'DARK_PROG_03.MP3', src: '../assets/musica3.mp3' }
+        ];
+        let currentTrack = parseInt(localStorage.getItem('cyberBeat_trackIndex')) || 0;
+
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('play-btn');
+
+        window.addEventListener('load', () => {
+            const savedTime = localStorage.getItem('cyberBeat_time');
+            const wasPlaying = localStorage.getItem('cyberBeat_playing') === 'true';
+
+            music.src = playlist[currentTrack].src;
+            if (savedTime) music.currentTime = parseFloat(savedTime);
+            
+            if (wasPlaying) {
+                music.play().then(() => updateUI(true));
+            } else {
+                updateUI(false);
+            }
+        });
+
+        music.ontimeupdate = () => {
+            localStorage.setItem('cyberBeat_time', music.currentTime);
+        };
+
+        function nextTrack() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            music.src = playlist[currentTrack].src;
+            localStorage.setItem('cyberBeat_trackIndex', currentTrack);
+            music.play().then(() => updateUI(true));
+        }
+
+        function prevTrack() {
+            currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+            music.src = playlist[currentTrack].src;
+            localStorage.setItem('cyberBeat_trackIndex', currentTrack);
+            music.play().then(() => updateUI(true));
+        }
+
+        function updateUI(playing) {
+            if (playing) {
+                btn.innerText = '⏸';
+                localStorage.setItem('cyberBeat_playing', 'true');
+            } else {
+                btn.innerText = '▶';
+                localStorage.setItem('cyberBeat_playing', 'false');
+            }
+        }
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play().then(() => updateUI(true));
+            } else {
+                music.pause();
+                updateUI(false);
+            }
+        }
+    </script>
+
+</body>
+</html>

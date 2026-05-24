@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberBeat // Ingressos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cyber-grid"></div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../assets/LogoT.png" alt="Logo CyberBeat">
+            </a>
+        </div>
+        <div class="Titulo">
+            <h1>Ingressos</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../Projeto/divulgacao.html">FOTOS</a> // 
+            <a href="ingressos.html">INGRESSOS</a> // 
+            <a href="contato.html">LOCAL</a>
+        </div>
+    </header>
+
+    <section class="lineup" style="padding-bottom: 0;">
+        <h2>INGRESSOS_BASE.LOG</h2>
+        <div class="dj-list ticket-grid">
+            <div class="dj-card">
+                <h3>ESTUDANTE (>18)</h3>
+                <p>Acesso à Pista. <br>Valor: R$ 75,00</p>
+                <button class="btn-ticket">Comprar</button>
+            </div>
+            <div class="dj-card">
+                <h3>ADULTO</h3>
+                <p>Acesso Pista Full. <br>Valor: R$ 150,00</p>
+                <button class="btn-ticket">Comprar</button>
+            </div>
+            <div class="dj-card">
+                <h3>MENOR 18</h3>
+                <p>Pista + Pulseira ID.<br>Valor: R$ 50,00</p>
+                <button class="btn-ticket">Comprar</button>
+            </div>
+        </div>
+        
+        <div class="alert-box">
+            <p><strong>[ALERTA_DE_SEGURANÇA]:</strong> Para a categoria Menor 18, é obrigatória a aquisição gratuita de uma pulseira com QR CODE de identificação do responsável (Comprador). O responsável deve estar presente e com acesso ao evento. Caso o par não seja detectado, um alerta será emitido 5 minutos após a entrada para localização ou remoção acompanhada por Oficiais.</p>
+        </div>
+    </section>
+
+    <section class="lineup">
+        <h2>CATEGORIAS_ESPECIAIS.SYS</h2>
+        <p style="color: var(--neon-pink); margin-bottom: 2rem; font-size: 0.9rem;">* Aviso: Estas categorias não classificam a carreira do profissional, apenas o nível de benefícios do ingresso!</p>
+        <div class="dj-list ticket-grid">
+            <div class="dj-card">
+                <h3>JUNIOR</h3>
+                <p>Camarote + 1 Drink.<br>Valor: R$ 300,00</p>
+                <button class="btn-ticket">Comprar</button>
+            </div>
+            <div class="dj-card">
+                <h3>PLENO</h3>
+                <p>Camarote + 3 Drinks.<br>Valor: R$ 500,00</p>
+                <button class="btn-ticket">Comprar</button>
+            </div>
+            <div class="dj-card">
+                <h3>SENIOR</h3>
+                <p>Camarote + 50% Consumação.<br>Valor: R$ 800,00</p>
+                <button class="btn-ticket">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <h2>TABELA_DE_PRECOS_FINAL.CSV</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>CATEGORIA</th>
+                    <th>MODALIDADE</th>
+                    <th>VALOR</th>
+                    <th>DETALHES_EXTRA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td rowspan="3">SIMPLES</td><td>MENOR 18</td><td>R$ 50,00</td><td>Pulseira QR + Responsável Obrigatório</td></tr>
+                <tr><td>ESTUDANTE</td><td>R$ 75,00</td><td>Pista (Apresentar carteirinha)</td></tr>
+                <tr><td>ADULTO</td><td>R$ 150,00</td><td>Acesso Pista Full</td></tr>
+                <tr><td rowspan="3">VIP (Camarote)</td><td>JUNIOR</td><td>R$ 300,00</td><td>+ 1 Drink de boas-vindas</td></tr>
+                <tr><td>PLENO</td><td>R$ 500,00</td><td>+ 3 Drinks inclusos</td></tr>
+                <tr><td>SENIOR</td><td>R$ 800,00</td><td>+ R$ 400 em créditos (50% do valor)</td></tr>
+                <tr><td colspan="4" class="table-footer">FORMAS DE PAGAMENTO: PIX, CRYPTO OU CARTÃO CRÉDITO</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jonathan.andrietti.3?locale=pt_BR"
+            target="_blank"><img width="90px" src="../assets/FacebookPsy.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/jonathan_andrietti/?hl=pt-br"
+            target="_blank"><img width="100px" src="../assets/InstagranPsy.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/jonathan-andrietti/"
+            target="_blank"><img width="100px" src="../assets/LinkdinPsy.png" alt="Linkedin"></a>
+            <a href="https://tiktok.com/@jonathan_andrietti"
+            target="_blank"><img width="90px" src="../assets/TiktokPsy.png" alt="TikTok"></a>
+            <a href="https://www.youtube.com/watch?v=q8p_S9e6RUk&list=RDq8p_S9e6RUk&start_radio=1" target="_blank"><img width="90px" src="../assets/YoutubePsy.png" alt="YouTube"></a>
+        </div>
+        <p class="location">Av. Atlântica, Barra Sul - Balneário Camboriú // Arena Cyber Beach</p>
+        <p class="copy">&copy; 2024 CyberBeat. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Módulo de Áudio -->
+    <div class="cyber-player">
+        <audio id="bg-music" loop>
+            <source src="../assets/musica.mp3" type="audio/mpeg">
+        </audio>
+        <button class="player-btn" onclick="prevTrack()" title="Anterior">⏮</button>
+        <button id="play-btn" class="player-btn" onclick="toggleMusic()" title="Play/Pause">▶</button>
+        <button class="player-btn" onclick="nextTrack()" title="Próxima">⏭</button>
+    </div>
+
+    <script>
+        const playlist = [
+            { name: 'RADIO_PSY_01.MP3', src: '../assets/musica.mp3' },
+            { name: 'TECHNO_CORE_02.MP3', src: '../assets/musica2.mp3' },
+            { name: 'DARK_PROG_03.MP3', src: '../assets/musica3.mp3' }
+        ];
+        let currentTrack = parseInt(localStorage.getItem('cyberBeat_trackIndex')) || 0;
+
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('play-btn');
+
+        window.addEventListener('load', () => {
+            const savedTime = localStorage.getItem('cyberBeat_time');
+            const wasPlaying = localStorage.getItem('cyberBeat_playing') === 'true';
+
+            music.src = playlist[currentTrack].src;
+            if (savedTime) music.currentTime = parseFloat(savedTime);
+            
+            if (wasPlaying) {
+                music.play().then(() => updateUI(true));
+            } else {
+                updateUI(false);
+            }
+        });
+
+        music.ontimeupdate = () => {
+            localStorage.setItem('cyberBeat_time', music.currentTime);
+        };
+
+        function nextTrack() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            music.src = playlist[currentTrack].src;
+            localStorage.setItem('cyberBeat_trackIndex', currentTrack);
+            music.play().then(() => updateUI(true));
+        }
+
+        function prevTrack() {
+            currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+            music.src = playlist[currentTrack].src;
+            localStorage.setItem('cyberBeat_trackIndex', currentTrack);
+            music.play().then(() => updateUI(true));
+        }
+
+        function updateUI(playing) {
+            if (playing) {
+                btn.innerText = '⏸';
+                localStorage.setItem('cyberBeat_playing', 'true');
+            } else {
+                btn.innerText = '▶';
+                localStorage.setItem('cyberBeat_playing', 'false');
+            }
+        }
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play().then(() => updateUI(true)).catch(() => {
+                    btn.innerText = 'ERRO_DE_CARREGAMENTO';
+                    status.innerText = 'STATUS: ARQUIVO_AUSENTE';
+                });
+            } else {
+                music.pause();
+                updateUI(false);
+            }
+        }
+    </script>
+</body>
+</html>
